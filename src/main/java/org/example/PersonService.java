@@ -28,7 +28,7 @@ public class PersonService {
             list.add(person);
             return "Thêm nhân viên thành công";
         } else {
-            return "Tuổi nhân viên phải lớn hơn 18  ";
+            return "Tuổi nhân viên phải lớn hơn 18";
         }
     }
 

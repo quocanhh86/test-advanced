@@ -31,11 +31,17 @@ public class TestB2 {
         Person person = new Person(null,"quocanh", 22, 200f,3,"It");
         Assertions.assertThrows(NullPointerException.class, () -> personService.addPerson(person));
     }
+//    @Test
+//    public void testAddNhanVien2(){
+//        String exp = "Lương nhân viên phải lớn hơn 0 và bé hơn 2 tỷ";
+//        Person person = new Person("id","quocanh", 22, -200f,3,"It");
+//        String act = personService.addPerson(person);
+//        Assertions.assertEquals(exp, act);
+//    }
+
     @Test
     public void testAddNhanVien2(){
-        String exp = "Lương nhân viên phải lớn hơn 0";
-        Person person = new Person("id","quocanh", 22, -200f,3,"It");
-        String act = personService.addPerson(person);
-        Assertions.assertEquals(exp, act);
+        Person person = new Person(null,"quocanh", 22, -200f,3,"It");
+        Assertions.assertThrows(IllegalArgumentException.class, () -> personService.addPerson(person));
     }
 }
